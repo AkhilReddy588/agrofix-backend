@@ -26,9 +26,6 @@ app.use('/api/orders', orderRoutes)
 app.get('/', (req, res) => {
     res.send('Server is running')
 })
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`)
-});
+
 
 module.exports.handler = serverless(app);
