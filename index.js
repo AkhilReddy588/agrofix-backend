@@ -27,5 +27,5 @@ app.get('/', (req, res) => {
     res.send('Server is running')
 })
 
-
+module.exports = app;
 module.exports.handler = serverless(app);
