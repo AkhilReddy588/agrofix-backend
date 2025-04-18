@@ -5,7 +5,6 @@ const dbConnect = require('./config/dbConnect')
 const authRoute = require('./routes/authRoute')
 const productRoutes = require('./routes/productRoute')
 const orderRoutes = require('./routes/orderRoute')
-const serverless = require('serverless-http');
 
 const app = express()
 app.use(express.json())
@@ -24,5 +23,3 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
 });
-
-module.exports.handler = serverless(app)
